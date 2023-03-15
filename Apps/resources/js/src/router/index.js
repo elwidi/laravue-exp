@@ -62,7 +62,7 @@ const routes = [
   {
     path: '/request',
     name: 'request',
-    component: () => import('@/views/request/About.vue'),
+    component: () => import('@/views/request/Datatables.vue'),
   },
   {
     path: '/error-404',

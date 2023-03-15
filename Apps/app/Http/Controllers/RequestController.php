@@ -9,8 +9,15 @@ class RequestController extends Controller
 {
   public function index()
   {
-    $req = DB::table('request')->first();
+    $req = DB::table('users')->get();
 
-    echo json_encode($req); exit;
+    $data = [
+      'totalItems' => count($req),
+      'tutorials' => $req,
+      'totalPages' => 1,
+      'currentPages' => 1
+    ];
+
+    echo json_encode($data); exit;
   }
 }
